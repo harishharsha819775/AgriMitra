@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Plus Jakarta Sans", "Noto Sans Kannada", "Noto Sans Devanagari", "Noto Sans Tamil", "Noto Sans Telugu", system-ui, sans-serif;
+  --font-sans: "DM Sans", "Noto Sans Kannada", "Noto Sans Devanagari", "Noto Sans Tamil", "Noto Sans Telugu", system-ui, sans-serif;
+
+  --color-agri-primary: #16803C;
+  --color-agri-dark: #14532D;
+  --color-agri-light: #EAF7EE;
+  --color-agri-bg: #F8FAF8;
+  --color-agri-text: #1F2937;
+  --color-agri-border: #DCE7DF;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    color: var(--color-agri-text);
+    background-color: var(--color-agri-bg);
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  button:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input:not(:disabled),
+  textarea:not(:disabled) {
+    transition-property: color, background-color, border-color, opacity, transform, box-shadow;
+    transition-duration: 180ms;
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  :focus-visible {
+    outline: 2px solid #16803C;
+    outline-offset: 2px;
+  }
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "AgriMitra AI",
+  "description": "Smart Farming, Simple Solutions — Multilingual AI-powered agricultural assistance for rural and small-scale farmers across India.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
